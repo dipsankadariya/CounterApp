@@ -50,11 +50,6 @@ class _HomePage extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: reset,
-        child: Icon(Icons.delete),
-        backgroundColor: Colors.blueGrey,
-      ),
       appBar: AppBar(
         title: Text(
           "Counter App",
@@ -82,6 +77,15 @@ class _HomePage extends State<HomePage> {
                 ElevatedButton(
                   onPressed: increase,
                   child: Icon(Icons.add, size: 40),
+                  style: ElevatedButton.styleFrom(
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.all(30),
+                  ),
+                ),
+                SizedBox(width: 50),
+                ElevatedButton(
+                  onPressed: reset,
+                  child: Icon(Icons.delete, size: 40),
                   style: ElevatedButton.styleFrom(
                     shape: CircleBorder(),
                     padding: EdgeInsets.all(30),
